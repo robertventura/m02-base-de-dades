@@ -93,7 +93,6 @@ CREATE TABLE IF NOT EXISTS `crime_xifols_sql`.`empleats` (
   `empleat_id` TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `departament_id` INT UNSIGNED NOT NULL,
   `carrec_id` TINYINT UNSIGNED NOT NULL,
-  `carrec` VARCHAR(25) NULL DEFAULT NULL,
   `nom` VARCHAR(15) NOT NULL,
   `cognom1` VARCHAR(20) NOT NULL,
   `cognom2` VARCHAR(20) NOT NULL,
@@ -123,32 +122,7 @@ DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
--- -----------------------------------------------------
--- Table `crime_xifols_sql`.`policia_evidencies`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `crime_xifols_sql`.`policia_evidencies` ;
 
-CREATE TABLE IF NOT EXISTS `crime_xifols_sql`.`policia_evidencies` (
-  `investigadors` VARCHAR(50) NOT NULL,
-  `evidencia` TEXT NOT NULL COMMENT 'Una evidencia és un fet provat a través de les dades de la BD',
- )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
-
--- -----------------------------------------------------
--- Table `crime_xifols_sql`.`policia_sospitosos`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `crime_xifols_sql`.`policia_sospitosos` ;
-
-CREATE TABLE IF NOT EXISTS `crime_xifols_sql`.`policia_sospitosos` (
-  `empleats` VARCHAR(150) NOT NULL,
-  `investigadors` VARCHAR(50) NOT NULL COMMENT 'Nom del grup o membres del grup que indtrodueix el sospitos i els motius + indicis\n',
-  `motius` TEXT NOT NULL COMMENT 'Detalls perquè es decideix que l\'empleat o empleats són sospitotos. S\'han d\'exposar els motius + indicis + proves.'
-)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
